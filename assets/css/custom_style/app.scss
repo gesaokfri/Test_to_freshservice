@@ -1,0 +1,88 @@
+// Custom Style
+@import "globalstyle";
+@import "table";
+@import "form";
+
+.cashflow-item{
+  .profit,.bank{
+    &.arrow-up{
+      filter: invert(56%) sepia(96%) saturate(406%) hue-rotate(72deg) brightness(89%) contrast(81%);
+      width: 70px;
+      transform: rotate(270deg);
+      animation: up-down 1.5s infinite linear;
+    }
+    &.arrow-down{
+      filter: invert(59%) sepia(92%) saturate(6494%) hue-rotate(344deg) brightness(99%) contrast(105%);
+      width: 70px;
+      transform: rotate(90deg);
+      animation: up-down 1.5s infinite linear;
+    }
+  }
+  .cashflow-value{
+    font-size: 32px;
+    font-weight: 600;
+  }
+}
+
+@keyframes up-down {
+  from {
+    margin-top: -10px;
+  }
+  to {
+    margin-top: 10px;
+  }
+}
+
+.page-content{
+  &::-webkit-scrollbar-track
+  {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #F5F5F5;
+  }
+
+  &::-webkit-scrollbar
+  {
+    width: 3px;
+    background-color: #F5F5F5;
+  }
+
+  &::-webkit-scrollbar-thumb
+  {
+    background-color: #fcaf17;
+  }
+  .portal-statistic{
+    .card{
+      height: 100%;
+    }
+  }
+  .item-menu{
+    .card{
+      border-radius: 8px;
+      overflow: hidden;
+      transition: .3s;
+      h4,img{
+        transition: .3s;
+      }
+      &:hover{
+        transform: scale(1.1);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.158);
+        background-color: #fff3dd;
+        h4{
+          color: #fcaf17;
+        }
+      }
+    }
+  }
+}
+
+.carousel-indicators{
+  bottom: -13px;
+  [data-bs-target]{
+    background-color: #fcaf17;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-right: 8px;
+    margin-left: 8px;
+  }
+}

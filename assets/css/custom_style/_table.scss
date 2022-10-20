@@ -1,0 +1,66 @@
+
+.table.dataTable{
+  margin-bottom: 20px !important;
+  tbody{
+    tr{
+      cursor: default !important;
+      &.selected{
+       background: #e6ba5540!important;
+      }
+      td{
+        vertical-align: middle !important;
+        color: #495057;
+        input{
+          cursor: pointer !important;
+        }
+        &:last-child{
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+.table{
+  th{
+    vertical-align: middle !important;
+  }
+}
+
+.td-action{
+  width: 80px !important;
+}
+
+.table-btn-group{
+  ul{
+    li{
+      display: flex;
+      button{
+        margin: auto !important;
+        width: 100%;
+        transition: .3s;
+        &.btn-delete{
+          background-color: rgb(255, 242, 242);
+          color: rgb(224, 114, 114);
+          transition: .3s;
+          &:hover{
+            background-color: rgb(255, 232, 232);
+          }
+        }
+        &:hover{
+          background-color: rgb(247, 247, 247);
+        }
+      }
+    }
+  }
+  .dropdown-menu.show{
+    min-width: 0;
+    padding: 0 !important;
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    flex-direction: column !important;
+    inset: 0px auto auto -54px !important;
+    overflow: hidden !important;
+  }
+}

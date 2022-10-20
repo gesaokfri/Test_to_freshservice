@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>jQuery skylo: Top Loading Bar Demo</title>
+    <link href='http://fonts.googleapis.com/css?family=Sonsie+One' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/darkly/bootstrap.min.css">
+    <link rel="stylesheet" href="../vendor/styles/skylo.css">
+
+
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="../vendor/scripts/skylo.js"></script>
+
+
+</head>
+<body>
+    <!-- ApplicationView -->
+    <h1 style="font-family:'Sonsie One', cursive; text-align: center; margin-top:100px;">Skylo Plugin Demo</h1>
+    <div class="jquery-script-ads" style="margin:50px auto;" align="center"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-2783044520727903";
+/* jQuery_demo */
+google_ad_slot = "2780937993";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+    <div class="container" style="padding-top: 50px">
+        <div id="demo" class="btn btn-info" style="margin:0 auto;width: 200px; display:block">Full Demo</div>
+
+        <div id="start" class="btn btn-default">start</div>
+        <div id="end" class="btn btn-danger">end</div>
+        <div id="set" class="btn btn-warning">set(50)</div>
+        <div id="get" class="btn btn-info">get</div>
+        <div id="inch" class="btn btn-primary">inch(10)</div>
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+
+
+        $(function(){
+			$.skylo({
+    state: 'danger',
+    inchSpeed: 200,
+    initialBurst: 5,
+    flat: false
+});
+            $('#demo').on('click',function(){
+                $.skylo('start');
+
+                setTimeout(function(){
+                   $.skylo('set',50);
+                },1000);
+
+                setTimeout(function(){
+                    $.skylo('end');
+                },1500);
+            });
+
+            $('#start').on('click',function(){
+                $.skylo('start');
+            });
+
+            $('#end').on('click',function(){
+               $.skylo('end');
+            });
+
+            $('#set').on('click',function(){
+                $.skylo('show',function(){
+                    $.skylo('set',50);
+                });
+            });
+
+            $('#get').on('click',function(){
+                alert($.skylo('get')+'%');
+            });
+
+            $('#inch').on('click',function(){
+                $.skylo('show',function(){
+                   $.skylo('inch',10);
+                });
+            });
+
+
+        })
+    </script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>
